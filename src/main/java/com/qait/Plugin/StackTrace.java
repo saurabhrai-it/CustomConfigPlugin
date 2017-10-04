@@ -1,7 +1,10 @@
 package com.qait.Plugin;
 
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.vfs2.FileNotFoundException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jmeter.config.ConfigTestElement;
 import org.apache.jmeter.services.FileServer;
 import org.apache.jmeter.testbeans.TestBean;
@@ -10,16 +13,12 @@ import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.logging.LoggingManager;
 import org.apache.log.Logger;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-
 
 public class StackTrace  extends ConfigTestElement implements TestBean,TestStateListener {                //TestBean is a marker interface to tell JMeter to make a Test Bean Gui for the class.
                                                                                                           //We need to read the property file before the test plan gets executed. So we need to implement the corresponding interface – TestStateListener.
     private static final Logger log = LoggingManager.getLoggerForClass();
     private String propFilePath;       //Variable for each field in the GUI.
-
+    private static final long serialVersionUID = 232L;
     public StackTrace() {
         super();
     }

@@ -1,8 +1,5 @@
 package com.qait.Plugin;
 
-
-
-
 import org.apache.jmeter.testbeans.BeanInfoSupport;
 
 import java.beans.PropertyDescriptor;
