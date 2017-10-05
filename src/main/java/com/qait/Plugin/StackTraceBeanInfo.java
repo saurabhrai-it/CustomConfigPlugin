@@ -11,11 +11,11 @@ import java.beans.PropertyDescriptor;
 
 public class StackTraceBeanInfo extends BeanInfoSupport {
     //create a variable for each field
-    private static final String FIELD_PROPERTY_FILE_PATH  = "propFilePath"; //variable name for field in the GUI.
+    private static final String StackTrace_FILE_PATH  = "StackTraceFilePath"; //variable name for field in the GUI.
 
     public StackTraceBeanInfo() {
         super(StackTrace.class);
-        PropertyDescriptor p = this.property(FIELD_PROPERTY_FILE_PATH);
+        PropertyDescriptor p = this.property(StackTrace_FILE_PATH);
         p.setValue("notUndefined", Boolean.TRUE);
         p.setValue("default", "");
     }
